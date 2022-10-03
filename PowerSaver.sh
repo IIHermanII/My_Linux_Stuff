@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# A simple bash script that allows the user to enter a state similar to "PowerSaving" 
+# by turning off cores and limiting the rest
+
 read -p "Enable/Disable power saving (1/0): " ans
 if [ "$ans" = "1" ]; then
 	read -p "How many cores to disable (1-15) 1 = all but 1: " ans
