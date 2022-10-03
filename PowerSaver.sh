@@ -2,6 +2,12 @@
 
 # A simple bash script that allows the user to enter a state similar to "PowerSaving" 
 # by turning off cores and limiting the rest
+# USES: https://christitus.com/laptop-power-management/ as a guide.
+
+if [ "$EUID " -ne 0 ]; then
+	echo "Please run as root"
+	exit
+fi
 
 read -p "Enable/Disable power saving (1/0): " ans
 if [ "$ans" = "1" ]; then
